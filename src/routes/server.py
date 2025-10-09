@@ -1,28 +1,36 @@
-from flask import Flask, request, jsonify
+from fastapi import FastAPI
+from pydantic import BaseModel
 from models.agent import SportAI
 from utils.config import Config
 
-app = Flask(__name__)
+app = FastAPI()
 config = Config()
 agent = SportAI(config)
 
-@app.route('/api/predict', methods=['POST'])
-def predict():
-    data = request.json
-    result = agent.predict(data)
-    return jsonify({"prediction": result})
+class PredictionRequest(BaseModel):
+    data: dict
 
-@app.route('/api/training/recommend', methods=['GET'])
-def recommend_training():
-    user_id = request.args.get('user_id')
+class TrainingSession(BaseModel):
+    user_id: str
+    exercise_type: str
+    duration: int
+    intensity: str
+
+@app.post("/api/predict")
+async def predict(request: PredictionRequest):
+    result = agent.predict(request.data)
+    return {"prediction": result}
+
+@app.get("/api/training/recommend")
+async def recommend_training(user_id: str):
     recommendations = agent.get_recommendations(user_id)
-    return jsonify({"recommendations": recommendations})
+    return {"recommendations": recommendations}
 
-@app.route('/api/training/log', methods=['POST'])
-def log_training():
-    training_data = request.json
-    agent.log_training_session(training_data)
-    return jsonify({"status": "success"})
+@app.post("/api/training/log")
+async def log_training(training: TrainingSession):
+    agent.log_training_session(training.dict())
+    return {"status": "success"}
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
