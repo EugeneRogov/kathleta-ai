@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from models.agent import SportAI
-from utils.config import Config
+from config.config import Config
 
 app = FastAPI()
 config = Config()
