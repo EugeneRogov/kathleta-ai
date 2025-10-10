@@ -1,5 +1,5 @@
 from models.agent import SportAI
-from utils.config import Config
+from config.config import Config
 
 def main():
     config = Config()
