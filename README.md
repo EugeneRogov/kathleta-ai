@@ -1,21 +1,31 @@
 # Kathleta AI
 
-AI-powered sports training assistant.
+<p align="center">
+  <img src="docs/assets/logo.png" alt="Kathleta AI Logo" width="200"/>
+</p>
 
-## Setup
+> AI-powered sports analytics and training assistant
 
-1. Create virtual environment:
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
+Kathleta AI is an intelligent agent designed to analyze, provide recommendations, and deliver analytics for the [Kathleta KMP project](https://github.com/EugeneRogov/kathleta-kmp). It leverages artificial intelligence to help athletes and coaches optimize their training and performance.
 
-2. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+## 🚀 Features
 
-3. Run the application:
-```bash
-python src/main.py
-```
+- **Performance Analysis**: Deep analysis of athletic performance data
+- **Personalized Recommendations**: AI-driven training suggestions
+- **Real-time Analytics**: Instant insights during training sessions
+- **Progress Tracking**: Monitor and visualize improvement over time
+- **Integration**: Seamless connection with Kathleta KMP platform
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/EugeneRogov/kathleta-ai/issues).
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👥 Contact
+
+Eugene Rogov - [GitHub](https://github.com/EugeneRogov)
+
+Project Link: [https://github.com/EugeneRogov/kathleta-ai](https://github.com/EugeneRogov/kathleta-ai)
