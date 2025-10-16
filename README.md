@@ -1,9 +1,5 @@
 # Kathleta AI
 
-<p align="center">
-  <img src="docs/assets/logo.png" alt="Kathleta AI Logo" width="200"/>
-</p>
-
 > AI-powered sports analytics and training assistant
 
 Kathleta AI is an intelligent agent designed to analyze, provide recommendations, and deliver analytics for the [Kathleta KMP project](https://github.com/EugeneRogov/kathleta-kmp). It leverages artificial intelligence to help athletes and coaches optimize their training and performance.
@@ -23,9 +19,3 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 ## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 👥 Contact
-
-Eugene Rogov - [GitHub](https://github.com/EugeneRogov)
-
-Project Link: [https://github.com/EugeneRogov/kathleta-ai](https://github.com/EugeneRogov/kathleta-ai)
